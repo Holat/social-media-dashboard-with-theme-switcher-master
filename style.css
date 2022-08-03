@@ -1,0 +1,324 @@
+:root{
+
+    /* primary color */
+    --clr-Lime-Green: hsl(163, 72%, 41%);
+    --clr-Bright-Red: hsl(356, 69%, 56%);
+    --clr-Facebook: hsl(208, 92%, 53%);
+    --clr-Twitter: hsl(203, 89%, 53%);
+    --clr-Instagram: linear-gradient(45deg,hsl(37, 97%, 70%) , hsl(329, 70%, 58%)) ;
+    --clr-YouTube: hsl(348, 97%, 39%);
+
+    --width : 75%;
+}
+.dark-mode{
+    --clr-Toggle: linear-gradient(45deg, hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+    --clr-BG : hsl(230, 17%, 14%) ;
+    --clr-top-BG : hsl(232, 19%, 15%);
+    --clr-card-BG : hsl(228, 28%, 20%);
+    --clr-card-hover :  hsl(227, 25%, 24%); 
+    --text-1 : hsl(228, 34%, 66%);
+    --text-2 : white;
+}
+.light-mode{
+    --clr-Toggle:hsl(230, 22%, 74%);
+    --clr-BG : hsl(0, 0%, 100%) ;
+    --clr-top-BG : hsl(225, 100%, 98%);
+    --clr-card-BG : hsl(227, 47%, 96%);
+    --clr-card-hover : hsl(227, 47%, 93%); 
+    --text-1 : hsl(228, 12%, 44%);
+    --text-2 : hsl(230, 17%, 14%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--clr-BG);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.top-pattern{
+    background-color: var(--clr-top-BG);
+    transition: background-color 0.5s ease;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.justify-btw{
+    justify-content: space-between ;
+}
+
+.header{
+    justify-content:space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top:  1rem;
+}
+.head{
+    width: 100%;
+}
+.head h2{
+    color: var(--text-2);
+
+}
+
+.head p{
+    color: var(--text-1);
+    font-weight: 700;
+    
+}
+
+.header  .hr{
+    border: none;
+    border-top: 1px solid var(--text-1);
+    width: 100%;
+}
+
+.toggle-container{
+    color:  var(--text-1);
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+input[type="checkbox"].switch{
+    display: none;
+}
+
+input[type="checkbox"].switch + label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="checkbox"].switch + label::before{
+    content: "";
+    width: 50px;
+    height: 25px;
+    background: var(--clr-Toggle);
+    border-radius: 2rem;
+    transition: all 0.5s ease;
+}
+
+input[type="checkbox"].switch + label::after{
+    content: "";
+    width: 19px;
+    aspect-ratio: 1;
+    background-color: var(--clr-BG);
+    border-radius: 2rem;
+    position: absolute;
+    left: 2.5px;
+    transition-property: transform , background-color;
+    transition:  0.5s ease;
+     
+}
+
+input[type="checkbox"].switch:checked + label::after{
+    transform: translateX(133%);
+}
+
+.card{
+    background-color: var(--clr-card-BG);
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transition: background-color 0.3s ease;
+    background-color: var(--clr-card-hover);
+}
+
+.followers-cards{
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.username{
+    color: var(--text-1);
+    font-size: 0.8rem;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.follow-card{
+    text-align: center;
+    border-top: 4px solid;
+    border-color: var(--clr-Facebook);
+    overflow: hidden;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.followers h1{
+    color: var(--text-2);
+    font-size: 3.5rem;
+}
+
+.followers p{
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.8rem;
+}
+
+.growth{
+    color: var(--clr-Lime-Green);
+    gap:5px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.follow-card:nth-of-type(2){
+    border-color:var(--clr-Twitter)
+}
+
+.follow-card:nth-of-type(3){
+    border: none;
+    position: relative;
+}
+.border{
+    position: absolute;
+    background-image: var(--clr-Instagram);
+    width: 100%;
+    top: 0;
+    height: 4px;
+}
+.follow-card:nth-of-type(4){
+    border-color: var(--clr-YouTube);
+}
+
+.overview{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.overview h2{
+    color: var(--text-2);
+}
+
+.overview-cards{
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.overview-card{
+    flex-direction: column;
+
+}
+
+.page-view{
+    color: var(--text-1);
+    margin-bottom: 2rem;
+}
+
+.today h3{
+    color: var(--text-2);
+    font-size: 2rem;
+}
+
+.current{
+    font-weight: 700;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: var(--clr-Lime-Green);
+}
+
+.red{
+    color: var(--clr-Bright-Red);
+}
+
+@media screen and (min-width:750px) {
+    .header{
+        flex-direction: row;
+        margin: 0;
+        width: var(--width);
+    }
+    .header .hr{
+        display: none;
+    }
+    .toggle-container{
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .followers-cards{
+        width: var(--width);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .overview{
+        width: var(--width);
+    }
+    .overview-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen  and (min-width: 1440px) {
+    .top-pattern{
+        height: 270px;
+    }
+    .container{
+        padding: 0;
+    }
+    .header{
+        flex-direction: row;
+        margin: 0;
+        width: var(--width);
+    }
+    .header .hr{
+        display: none;
+    }
+    .toggle-container{
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .followers-cards{
+        width: var(--width);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .overview{
+        width: var(--width);
+    }
+    .overview-cards{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <div class="top-pattern"></div>
+    <header class="header flex">
+      <div class="head">
+        <h2>Social Media Dashboard</h2>
+        <p>Total Followers: 23,004</p>
+      </div>
+      <div class="hr"></div>
+      <div class="toggle-container flex">
+        <p class="mode">Dark Mode</p>
+        <div class="toggle">
+          <input type="checkbox" name="switch" id="switch" class="switch">
+          <label for="switch"></label>
+        </div>
+      </div>
+    </header>
+    <div class="followers-cards">
+      <div class="follow-card flex card">
+        <div class="username flex">
+          <img src="./images/icon-facebook.svg" alt="">
+          <p>@nathanf</p>
+        </div>
+        <div class="followers">
+          <h1>1987</h1>
+          <p>Followers</p>
+        </div>
+        <div class="growth flex">
+          <img src="./images/icon-up.svg" alt="">
+          <p>12 Today</p>
+        </div>
+      </div>
+      <div class="follow-card flex card">                          
+        <div class="username flex">
+          <img src="./images/icon-twitter.svg" alt="">
+          <p>@nathanf</p>
+        </div>
+        <div class="followers">
+          <h1>1044</h1>
+          <p>Followers</p>
+        </div>
+        <div class="growth flex">
+          <img src="./images/icon-up.svg" alt="">
+          <p>99 Today</p>
+        </div>
+      </div>
+      <div class="follow-card flex card">
+        <div class="border"></div>
+        <div class="username flex">
+          <img src="./images/icon-instagram.svg" alt="">
+          <p>@realnathanf</p>
+        </div>
+        <div class="followers">
+          <h1>11k</h1>
+          <p>Followers</p>
+        </div>
+        <div class="growth flex">
+          <img src="./images/icon-up.svg" alt="">
+          <p>1099 Today</p>
+        </div>
+      </div>
+      <div class="follow-card flex card">
+        <div class="username flex">
+          <img src="./images/icon-youtube.svg" alt="">
+          <p>Nathan F.</p>
+        </div>
+        <div class="followers">
+          <h1>8239</h1>
+          <p>Subscribers</p>
+        </div>
+        <div class="growth flex red">
+          <img src="./images/icon-down.svg" alt="">
+          <p>144 Today</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview">
+      <h2>Overview - Today</h2>
+      <div class="overview-cards">
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Page Views</h4>
+            <img src="./images/icon-facebook.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>87</h3>
+            <div class="flex current">
+              <img src="./images/icon-up.svg" alt="">
+              <p>3%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Likes</h4>
+            <img src="./images/icon-facebook.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>52</h3>
+            <div class="flex current red">
+              <img src="./images/icon-down.svg" alt="">
+              <p>2%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Likes</h4>
+            <img src="./images/icon-instagram.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>5462</h3>
+            <div class="flex  current">
+              <img src="./images/icon-up.svg" alt="">
+              <p>2257%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Profile Views</h4>
+            <img src="./images/icon-instagram.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>52k</h3>
+            <div class="flex current">
+              <img src="./images/icon-up.svg" alt="">
+              <p>1375%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Retweets</h4>
+            <img src="./images/icon-twitter.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>117</h3>
+            <div class="flex  current">
+              <img src="./images/icon-up.svg" alt="">
+              <p>303%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Likes</h4>
+            <img src="./images/icon-twitter.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>507</h3>
+            <div class="flex current">
+              <img src="./images/icon-up.svg" alt="">
+              <p>553%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Likes</h4>
+            <img src="./images/icon-youtube.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>107</h3>
+            <div class="flex  current red">
+              <img src="./images/icon-down.svg" alt="">
+              <p>19%</p>
+            </div>
+          </div>
+        </div>
+        <div class="overview-card card">
+          <div class="page-view flex justify-btw">
+            <h4>Total Views</h4>
+            <img src="./images/icon-youtube.svg" alt="">
+          </div>
+          <div class="flex justify-btw today">
+            <h3>1407</h3>
+            <div class="flex  current red">
+              <img src="./images/icon-down.svg" alt="">
+              <p>12%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
